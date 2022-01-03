@@ -32,7 +32,8 @@ fun main() {
         println("My dog enjoys $item")
     }
     val dogs = arrayOf(Dogs("Kelpie",30,"Westie"),
-                        Dogs("Ripper",89,"Poodle"))
+                        Dogs("Ripper",89,"Poodle"),
+                        Dogs("Bruno",84,"Bull"))
 
     dogs[0].bark()
     println("Weight for ${dogs[0].name} is ${dogs[0].weight}")
@@ -40,4 +41,7 @@ fun main() {
     dogs[1].bark()
     dogs[1].weight =16
     println("Weight for ${dogs[1].name} is ${dogs[1].weight}")
+
+    dogs[2].bark()
+    println("Weight for ${dogs[2].name} is ${dogs[2].weight}")
 }
