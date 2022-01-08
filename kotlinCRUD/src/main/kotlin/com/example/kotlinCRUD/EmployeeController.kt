@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class EmployeeController(val repo : EmployeeRepository) {
 
-    
-
     @PostMapping("/employee")
     fun addEmployee(@RequestBody employee: Employee){
         repo.save(employee)
@@ -17,4 +15,6 @@ class EmployeeController(val repo : EmployeeRepository) {
 
     @GetMapping("/employee")
     fun getAllEmployees() = repo.findAll().toList()
+
+
 }
