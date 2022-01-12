@@ -1,6 +1,7 @@
 package linkedlist
 
 fun main() {
+
 //    println("Creating and linking nodes")
 //    val node1 = Node(value = 1)
 //    val node2 = Node(value = 2)
@@ -16,7 +17,7 @@ fun main() {
 //    println(node3)
 
     val list = LinkedList<Int>()
-    list.push(3).push(2).push(1)
+    list.push(50).push(3).push(2).push(1)
     println(list)
  }
 

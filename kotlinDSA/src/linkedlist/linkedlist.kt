@@ -1,9 +1,9 @@
 package linkedlist
 
-class LinkedList<E>{
+class LinkedList<T>{
 
-    private var head: Node<E>? = null
-    private var tail: Node<E>? = null
+    private var head: Node<T>? = null
+    private var tail: Node<T>? = null
 
     private var size = 0
 
@@ -19,7 +19,7 @@ class LinkedList<E>{
         }
     }
 
-    fun push(value: E):LinkedList<E>{
+    fun push(value: T):LinkedList<T>{
         head = Node(value = value,next = head)
         if (tail == null){
             tail = head
@@ -28,4 +28,14 @@ class LinkedList<E>{
         return this
     }
 
+
+
+}
+
+fun main(){
+    val list = LinkedList<Int>()
+    list.push(3)
+    list.push(2)
+    list.push(1)
+    println(list)
 }
