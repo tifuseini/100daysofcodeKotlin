@@ -14,4 +14,5 @@ fun main() {
     println("Your ${mySecondDice.numSides} sided " +
             "dice rolled ${mySecondDice.roll()}")
 
+    val
 }
