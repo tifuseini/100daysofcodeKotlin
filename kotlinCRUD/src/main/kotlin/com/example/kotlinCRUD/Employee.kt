@@ -1,12 +1,7 @@
 package com.example.kotlinCRUD
 
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
+import org.hibernate.annotations.Table
 import javax.persistence.Id
 
-@Entity
-data class Employee(
-    @Id @GeneratedValue val id:Long,
-    val firstName:String,
-    val lastName:String,
-    val age:Int)
+@Table(appliesTo = "MESSAGES")
+data class Employee(@Id val id:String, val name:String)

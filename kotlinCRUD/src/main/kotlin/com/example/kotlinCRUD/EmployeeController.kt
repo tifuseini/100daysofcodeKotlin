@@ -6,15 +6,11 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class EmployeeController(val repo : EmployeeRepository) {
+class EmployeeController{
 
-    @PostMapping("/employee")
-    fun addEmployee(@RequestBody employee: Employee){
-        repo.save(employee)
-    }
-
-    @GetMapping("/employee")
-    fun getAllEmployees() = repo.findAll().toList()
-
-
+    @GetMapping
+    fun index(): List<Employee> = listOf(
+        Employee("1","Tahiru"),
+        Employee("3","Fuseini")
+    )
 }
