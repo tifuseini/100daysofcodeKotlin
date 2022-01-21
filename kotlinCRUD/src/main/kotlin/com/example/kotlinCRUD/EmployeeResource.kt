@@ -11,8 +11,4 @@ class EmployeeResource(val service: EmployeeService) {
     @GetMapping
     fun index(): List<Employee> = service.findEmployees()
 
-    @PostMapping
-    fun post(@RequestBody employee: Employee) {
-        service.post(employee)
-    }
 }
