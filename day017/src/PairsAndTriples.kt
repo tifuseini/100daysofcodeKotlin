@@ -22,6 +22,7 @@ fun main() {
 
     val dateNew = Triple(1990,12,17)
     val (year,month,_) = dateNew
+
     println(dateNew)
 
 }
