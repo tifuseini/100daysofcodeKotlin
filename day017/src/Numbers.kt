@@ -12,6 +12,13 @@ fun main() {
     println(anyString)
     println(anyNumber)
 
+    fun add(){
+        val ressult = 2 + 2
+        println(ressult)
+    }
+
+    add()
+
 
 }
 
