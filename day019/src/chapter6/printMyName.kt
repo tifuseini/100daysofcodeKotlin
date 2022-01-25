@@ -16,5 +16,5 @@ fun main() {
 
     printMyName()
     printMultiplesOfFive(90)
-    printMultiplesOf(2,6)
+
 }
