@@ -14,6 +14,7 @@ class Vegetables : Item("Vegetables", 5){
 
 fun main() {
     val noodles = Noodles()
+
     val vegetables = Vegetables("Cabbages","Sprouts")
     println(noodles)
     println(vegetables)
