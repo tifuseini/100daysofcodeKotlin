@@ -46,4 +46,26 @@ fun main() {
 //    println(vegetables)
 //    println(vegetables3)
 
+    val ordersList = mutableListOf<Order>()
+    val order1 = Order(1)
+    order1.addItem(Noodles())
+    ordersList.add(order1)
+
+    var order2 = Order(2)
+    order2.addItem(Noodles())
+    order2.addItem(Vegetables("Pepper"))
+    ordersList.add(order2)
+
+    val order3 = Order(3)
+    order3.addItem(Noodles())
+    order3.addItem(Vegetables())
+    ordersList.add(order3)
+
+    val order4 = Order(4)
+    val items = listOf(Noodles(), Vegetables("Carrots", "Beans", "Celery"))
+    order4.addAll(items)
+    ordersList.add(order4)
+
+
+
 }
