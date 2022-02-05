@@ -1,82 +1,78 @@
-open class Item(
-    val name: String,
-    val price : Int
-)
+open class Item(val name: String, val price: Int)
 
-class Noodles : Item("Noodles",10){
+class Noodles : Item("Noodles", 10) {
     override fun toString(): String {
         return name
     }
 }
 
-class Vegetables(vararg val toppings:String) : Item("Vegetables",5){
+class Vegetables(vararg val toppings: String) : Item("Vegetables", 5) {
     override fun toString(): String {
-        if (toppings.isEmpty()){
+        if (toppings.isEmpty()) {
             return "$name Chef's Choice"
         } else {
-            return name + ":"+ toppings.joinToString()
+            return name + " " + toppings.joinToString()
         }
     }
 }
 
-class Order(val orderNumber: Int){
+class Order(val orderNumber: Int) {
     private val itemList = mutableListOf<Item>()
 
-    fun addItem(newItem: Item) {
+    fun addItem(newItem: Item): Order {
         itemList.add(newItem)
+        return this
     }
 
-    fun addAll(newItems: List<Item>) {
+    fun addAll(newItems: List<Item>): Order {
         itemList.addAll(newItems)
+        return this
     }
 
-    fun print(){
+    fun print() {
         println("Order #${orderNumber}")
         var total = 0
-        for (item in itemList){
+        for (item in itemList) {
             println("${item}: $${item.price}")
             total += item.price
         }
-        println("Total : $${total}")
-
+        println("Total: $${total}")
     }
 }
 
-
-
 fun main() {
-
-//    val noodles = Noodles()
-//    val vegetables = Vegetables("Cabbage", "Sprouts", "Onion")
-//    val vegetables3 = Vegetables()
-//    println(noodles)
-//    println(vegetables)
-//    println(vegetables3)
-
     val ordersList = mutableListOf<Order>()
+
     val order1 = Order(1)
     order1.addItem(Noodles())
     ordersList.add(order1)
 
-    var order2 = Order(2)
+    val order2 = Order(2)
     order2.addItem(Noodles())
-    order2.addItem(Vegetables("Pepper"))
+    order2.addItem(Vegetables())
     ordersList.add(order2)
 
     val order3 = Order(3)
-    order3.addItem(Noodles())
-    order3.addItem(Vegetables())
+    val items = listOf(Noodles(), Vegetables("Carrots", "Beans", "Celery"))
+    order3.addAll(items)
     ordersList.add(order3)
 
     val order4 = Order(4)
-    val items = listOf(Noodles(), Vegetables("Carrots", "Beans", "Celery"))
-    order4.addAll(items)
+        .addItem(Noodles())
+        .addItem(Vegetables("Cabbage", "Onion"))
     ordersList.add(order4)
 
 
-    for (order in ordersList){
+    ordersList.add(
+        Order(5)
+            .addItem(Noodles())
+            .addItem(Noodles())
+            .addItem(Vegetables("Spinach"))
+    )
+
+
+    for (order in ordersList) {
         order.print()
         println()
     }
-
 }
