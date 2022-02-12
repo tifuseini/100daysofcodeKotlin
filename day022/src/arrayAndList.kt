@@ -30,7 +30,6 @@ fun main() {
     println(newTown)
     val newRegion = regions.last()
     println(newTown)
-
     // Using Index
     val firstTown = towns[0]
     println(firstTown)
