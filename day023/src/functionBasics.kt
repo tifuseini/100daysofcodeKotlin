@@ -37,6 +37,12 @@ fun add(a:Int , b:Int):Int{
     return a + b
 }
 
+fun infiniteLoop():Nothing{
+    while (true){
+
+    }
+}
+
 
 fun main() {
     printMyName()
