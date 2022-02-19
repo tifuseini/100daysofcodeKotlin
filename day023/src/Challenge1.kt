@@ -1,7 +1,7 @@
 import kotlin.math.sqrt
 
 fun isNumberDivisible(number: Int, divisor:Int):Boolean{
-    return number % divisor = 0
+    return number % divisor == 0
 }
 
 fun isPrime(number: Int):Boolean{
@@ -24,6 +24,8 @@ fun isPrime(number: Int):Boolean{
 }
 
 fun main() {
+    println(isPrime(300))
+    println(isPrime(2))
 
 
 
