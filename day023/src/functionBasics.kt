@@ -33,6 +33,9 @@ fun getValue(value: String): String{
     return "The value is $value"
 }
 
+fun add(a:Int , b:Int):Int{
+    return a + b
+}
 
 
 fun main() {
@@ -46,4 +49,7 @@ fun main() {
     println("$get1 and $get2")
     val value2 = incrementAndPrint(30)
     println(value2)
+    var function = ::add
+    val newFunction = function(2,3)
+    println(newFunction)
 }
