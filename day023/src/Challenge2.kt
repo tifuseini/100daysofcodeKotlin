@@ -11,5 +11,9 @@ fun fibonacci(number:Int):Int{
 }
 
 fun main() {
+    println(fibonacci(0))
+    println(fibonacci(1))
+    println(fibonacci(2))
+    println(fibonacci(10))
 
 }
