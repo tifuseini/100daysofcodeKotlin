@@ -1,3 +1,6 @@
 package com.example.springbootapp
 
-data class Message()
+data class Message(
+    val id:String?,
+    val text:String
+)
