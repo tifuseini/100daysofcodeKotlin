@@ -1,5 +1,8 @@
 package com.example.springbootapp
 
+import org.springframework.stereotype.Service
+
+@Service
 class MessageService(val db:MessageRepository) {
 
     fun findMessages(): List<Message> = db.findMessages()
