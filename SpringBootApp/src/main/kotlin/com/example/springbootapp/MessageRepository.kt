@@ -7,4 +7,5 @@ interface MessageRepository : CrudRepository<Message,String> {
 
     @Query("select * from messages")
     fun findMessages(): List<Message>
+
 }
