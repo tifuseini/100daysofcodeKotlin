@@ -3,7 +3,7 @@ package BasicKotlin
 
 fun main() {
 
-    val name : String = "Dolly"
+    val name : String = null
     println(name)
 
 }
