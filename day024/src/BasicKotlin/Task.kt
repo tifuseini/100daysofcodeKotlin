@@ -10,4 +10,13 @@ class Task(
         const val DEFAULT_PRIORITY = 3
     }
 
+    //Property with custom setter
+    var priority = validPRIORITY(_priority)
+    set(value) {
+        field = validPRIORITY(value)
+    }
+
+    //Private validation function
+    private fun validPRIORITY(p:Int)=
+        p.coerceIn(MIN_PRIORITY, MAX_PRIORITY)
 }
