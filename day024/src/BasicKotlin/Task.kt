@@ -1,0 +1,4 @@
+package BasicKotlin
+
+class Task {
+}
