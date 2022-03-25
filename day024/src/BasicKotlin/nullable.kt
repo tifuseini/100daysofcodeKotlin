@@ -2,7 +2,7 @@ package BasicKotlin
 
 data class Person(
     val first:String,
-    val middle:String?,
+    var middle:String?,
     val last:String
 )
 
@@ -15,5 +15,12 @@ fun main() {
     println(jkRowling)
     println(northWest)
     println(tifuseini)
+
+    if (northWest.middle == null){
+        val middlelenght = northWest.middle?.length
+        println(middlelenght)
+    } else println("We")
+
+
 
 }
