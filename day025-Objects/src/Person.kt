@@ -1,7 +1,12 @@
-class Person constructor(firstName:String,lastName:String) {
+class Person (val firstName:String,val lastName:String) {
+
+    override fun toString(): String {
+        return "$firstName $lastName "
+    }
 }
 
 fun main() {
 
-    val jennifer = Person("Brain","Truesby")
+    val Brain = Person("Brain","Truesby")
+    println(Brain.toString())
 }
