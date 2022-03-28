@@ -8,6 +8,7 @@ class Task(
         const val MIN_PRIORITY = 1
         const val MAX_PRIORITY = 5
         const val DEFAULT_PRIORITY = 3
+
     }
 
     //Property with custom setter
