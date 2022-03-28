@@ -9,4 +9,5 @@ fun main() {
 
     val Brain = Person("Brain","Truesby")
     println(Brain.toString())
+    print(Brain)
 }
