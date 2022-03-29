@@ -20,4 +20,11 @@ fun main() {
     val Brain = Person("Brain","Truesby")
     println(Brain.toString())
     print(Brain)
+
+    // Setter and Getter
+    // Creat e a new Person
+
+    val wise = Person("wise","Zoddah")
+    println(wise.firstName)
+
 }
