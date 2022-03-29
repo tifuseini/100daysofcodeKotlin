@@ -1,4 +1,4 @@
-class Person (val firstName:String,val lastName:String) {
+class Person (var firstName:String,var lastName:String) {
 
     val fullname:String
 
