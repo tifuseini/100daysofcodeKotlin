@@ -16,4 +16,13 @@ class Person(_firstName : String,_lastName:String,
     override fun toString(): String {
         return fullName()
     }
+
+    override fun equals(other: Any?): Boolean {
+        if (other is Person){
+            return (firstName.equals(other.firstName)) &&
+                    (lastName.equals(other.lastName))
+        } else{
+            return false
+        }
+    }
 }
