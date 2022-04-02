@@ -27,6 +27,6 @@ class Person(_firstName : String,_lastName:String,
     }
 
     override fun hashCode(): Int {
-        return firstName.hashCode() + lastName.hashCode()
+        return (firstName.hashCode()* 28) + (lastName.hashCode() * 31)
     }
 }
