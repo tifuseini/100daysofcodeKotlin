@@ -34,4 +34,10 @@ fun main() {
         println("Tahiru and copy_of_tahiru are the same")
     else
         println("Tahiru and copy_of_tahiru are not the same")
+
+    //Hashcode
+    println("Tahiru hascode: ${Tahiru.hashCode()}")
+    println("Iddrisu hashcode: ${Iddrisu.hashCode()}")
+    println("Second tahiru hashcode : ${second_tahiru.hashCode()}")
+    println("Copy of Tahiru hashcode : ${copy_of_tahiru.hashCode()}")
 }
