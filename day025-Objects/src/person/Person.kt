@@ -25,4 +25,8 @@ class Person(_firstName : String,_lastName:String,
             return false
         }
     }
+
+    override fun hashCode(): Int {
+        return firstName.hashCode() + lastName.hashCode()
+    }
 }
