@@ -19,8 +19,8 @@ class Person(_firstName : String,_lastName:String,
 
     override fun equals(other: Any?): Boolean {
         if (other is Person){
-            return (firstName.equals(other.firstName)) &&
-                    (lastName.equals(other.lastName))
+            return (firstName == other.firstName) &&
+                    (lastName == other.lastName)
         } else{
             return false
         }
