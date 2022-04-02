@@ -23,8 +23,8 @@ fun main() {
     else
         println("Tahiru and Iddrisu are not the same")
 
-    val second_tahiru = Person("Tahiru","Fuseini",6.2,21,false)
-    if (second_tahiru.equals(Tahiru))
+    val secondTahiru = Person("Tahiru","Fuseini",6.2,21,false)
+    if (secondTahiru.equals(Tahiru))
         println("Tahiru and second_tahiru are the same")
     else
         println("Tahiru and second_tahiru are not the same")
@@ -35,9 +35,16 @@ fun main() {
     else
         println("Tahiru and copy_of_tahiru are not the same")
 
+    val backwardTahiru = Person("Tahiru","Fuseini",6.2,21,false)
+    if (backwardTahiru.equals(Tahiru))
+        println("Tahiru and backward_tahiru are the same")
+    else
+        println("Tahiru and backward_tahiru are not the same")
+
     //Hashcode
-    println("Tahiru hascode: ${Tahiru.hashCode()}")
+    println("Tahiru hashcode: ${Tahiru.hashCode()}")
     println("Iddrisu hashcode: ${Iddrisu.hashCode()}")
-    println("Second tahiru hashcode : ${second_tahiru.hashCode()}")
+    println("Second tahiru hashcode : ${secondTahiru.hashCode()}")
     println("Copy of Tahiru hashcode : ${copy_of_tahiru.hashCode()}")
+    println("Backward tahiru hashcode : ${backwardTahiru.hashCode()}")
 }
